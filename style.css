@@ -1,7 +1,33 @@
-.input-output { 
-    display: inline-block;
+* {
+    font-family: monospace;
 }
 
-.50 {
-    width: 50%;
+body {
+    font-family: monospace;
 }
+
+.input-output { 
+    display: inline-block;
+    width:100%;
+}
+.container { 
+    width: 75%;
+    margin: 0 auto; 
+}
+
+textarea {
+    resize: none;
+    margin-left: -14px;
+}
+
+.input{
+    margin-left: 0;
+} 
+
+.name {  
+    width: 90%;
+}
+
+button { 
+    height: 50px;
+ }

@@ -5,7 +5,7 @@ function copypasta() {
     bindName = document.getElementById("name").value
     currentAlias = 0
     // remove speech marks, and split the textarea into words
-    var input = document.getElementById("input").value.replace("\"", "'").split(" ");
+    var input = document.getElementById("input").value.replace("\"", "'").trim().replace(/(\r\n|\n|\r)/gm,"").split(" ");
     document.getElementById("output").value = `alias "${bindName}" "${bindName}0"` + "\n"
     for (var i = 0; i < input.length ;i++) {
         let currentWord = input[i]

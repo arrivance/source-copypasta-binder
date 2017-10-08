@@ -3,18 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <title>Message Generator (Copypasta convertor)</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <p>Convert a long passage of text into a bindable alias for Source Engine based games.</p>
+    <div class="container">
+        <p>Convert a long passage of text into a bindable alias for Source Engine based games.</p>
 
-    <textarea name="name" id="name" clos="1" rows="1" style="width:95%" placeholder="bind name"></textarea>
-    <div class="input-output">
-        <textarea name="input" id="input" cols="50" rows="50" style="width:50%;height:100%"></textarea>
-        <textarea name="output" id="output" cols="50" rows="50" style="width:45%;height:100%" readonly=true></textarea>
+        <input type="text" name="name" id="name" class="name" placeholder="Name of bind">
+        <div class="input-output">
+            <textarea name="input" id="input" class="input" cols="50" rows="25" style="width:45%;height:50%"></textarea>
+            <textarea name="output" id="output" cols="50" rows="25" style="width:45%;height:50%" readonly=true></textarea>
+        </div>
+
+        <button onclick="copypasta()" style="width:90%">Generate</button>
+
+        <script src="app.js"></script>
     </div>
-
-    <button onclick="copypasta()" style="width:95%">Generate</button>
-
-    <script src="app.js"></script>
 </body>
 </html>

@@ -9,10 +9,12 @@
     <div class="container">
         <p>Convert a long passage of text into a bindable alias for Source Engine based games.</p>
 
+        <p>To use: Set a name for the bind (this will be the command that you refer to it by), and paste in your passage of text. Press "Generate", and the output will be placed on the right-pane. This output should go into a configuration file for your game (config.cfg, or autoexec.cfg).</p>
+
         <input type="text" name="name" id="name" class="name" placeholder="Name of bind">
         <div class="input-output">
-            <textarea name="input" id="input" class="input" cols="50" rows="25" style="width:45%;height:50%"></textarea>
-            <textarea name="output" id="output" cols="50" rows="25" style="width:45%;height:50%" readonly=true></textarea>
+            <textarea name="input" id="input" class="input" cols="50" rows="25" style="width:45%;height:50%" placeholder="Put text here..."></textarea>
+            <textarea name="output" id="output" cols="50" rows="25" style="width:45%;height:50%" readonly=true placeholder="Your aliases will show up here."></textarea>
         </div>
 
         <button onclick="copypasta()" style="width:90%">Generate</button>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Message Generator (Copypasta convertor)</title>
+</head>
+<body>
+    <p>Convert a long passage of text into a bindable alias for Source Engine based games.</p>
+
+    <textarea name="name" id="name" clos="1" rows="1" style="width:95%" placeholder="bind name"></textarea>
+    <div class="input-output">
+        <textarea name="input" id="input" cols="50" rows="50" style="width:50%;height:100%"></textarea>
+        <textarea name="output" id="output" cols="50" rows="50" style="width:45%;height:100%" readonly=true></textarea>
+    </div>
+
+    <button onclick="copypasta()" style="width:95%">Generate</button>
+
+    <script src="app.js"></script>
+</body>
+</html>

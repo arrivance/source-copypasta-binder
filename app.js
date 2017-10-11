@@ -19,10 +19,10 @@ function copypasta() {
             // console.log(`debug output: currentWord: ${currentWord}, i: ${i}, sentenceLine: ${sentenceLine}, length of string: ${inputLen}`)
             if (sentenceLine.length + currentWord.length > sourceWordLimit) {
                 if (i+1 == input.length) {
-                    document.getElementById("output").value += `alias "${bindName}${currentAlias}" "${sentenceLine};alias ${bindName} ${bindName}0"` + "\n";
+                    document.getElementById("output").value += `alias "${bindName}${currentAlias}" "say ${sentenceLine};alias ${bindName} ${bindName}0"` + "\n";
                 }
                 else {
-                    document.getElementById("output").value += `alias "${bindName}${currentAlias}" "${sentenceLine};alias ${bindName} ${bindName}${currentAlias+1}"` + "\n";
+                    document.getElementById("output").value += `alias "${bindName}${currentAlias}" "say ${sentenceLine};alias ${bindName} ${bindName}${currentAlias+1}"` + "\n";
                     currentAlias += 1;
                     sentenceLine = currentWord + " ";
                 }
@@ -30,11 +30,11 @@ function copypasta() {
             else if (currentWord.slice(-1) == ".") {
                 if (i+1 == input.length) {
                     sentenceLine += currentWord + " ";
-                    document.getElementById("output").value += `alias "${bindName}${currentAlias}" "${sentenceLine};alias ${bindName} ${bindName}0"` + "\n";
+                    document.getElementById("output").value += `alias "${bindName}${currentAlias}" "say ${sentenceLine};alias ${bindName} ${bindName}0"` + "\n";
                 }
                 else {
                     sentenceLine += currentWord + " ";
-                    document.getElementById("output").value += `alias "${bindName}${currentAlias}" "${sentenceLine};alias ${bindName} ${bindName}${currentAlias+1}"` + "\n";
+                    document.getElementById("output").value += `alias "${bindName}${currentAlias}" "say ${sentenceLine};alias ${bindName} ${bindName}${currentAlias+1}"` + "\n";
                     currentAlias += 1;
                     sentenceLine = "";
                 }
@@ -42,7 +42,7 @@ function copypasta() {
 
             else if (i+1 == input.length) {
                 sentenceLine += currentWord + " ";
-                document.getElementById("output").value += `alias "${bindName}${currentAlias}" "${sentenceLine};alias ${bindName} ${bindName}0"` + "\n";
+                document.getElementById("output").value += `alias "${bindName}${currentAlias}" "say ${sentenceLine};alias ${bindName} ${bindName}0"` + "\n";
             }
             else {
                 sentenceLine += currentWord + " ";

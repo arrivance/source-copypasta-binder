@@ -6,7 +6,7 @@ function copypasta() {
     var bindName = document.getElementById("name").value;
     var currentAlias = 0;
     // remove speech marks, and split the textarea into words
-    var input = document.getElementById("input").value.replace(/\"/g, "'").trim().replace(/(\r\n|\n|\r)/gm," ").split(" ");
+    var input = document.getElementById("input").value.replace(/\"/g, "'").trim().replace(/\n{2,}/g, " ").split(" ");
 
     if (bindName == "") {
         document.getElementById("output").value = "No bind name was given.";
